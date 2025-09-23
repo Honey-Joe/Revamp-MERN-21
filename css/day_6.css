@@ -1,0 +1,37 @@
+p{
+    /* color: rgb(0, 24, 158); */
+    color: #533ba1;
+    background-color: red;
+}
+.bg-container{
+    background-color: rgb(25, 35, 35);
+    height: 100px;
+    background-image: url(../assets/Screenshot\ From\ 2025-07-05\ 16-30-08.png);
+    background-size: contain;
+    background-repeat: no-repeat ;
+    background-position: center;
+    /* width: 100px; */
+    opacity: 0.5;
+}
+/* .child{
+    background-color: red;
+    height: 50%;
+} */
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 30px;
+
+    border-left-width: 4px;
+    border-color: red;
+    border-style: dotted;
+    border-top-left-radius: 20px;
+
+    margin: 50px;
+}
+
