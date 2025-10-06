@@ -8,20 +8,74 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- Header Section Starting  -->
-     <header>
-      <div class="header-container flex justify-center items-center flex-col gap-5">
-        <h1 class="text-[45px] font-medium text-white">Get Delicious Food at Anytime</h1>
-        <p class="text-[28px] text-white">Eat smart and healthy</p>
-        <div class="flex gap-3">
-          <button class="bg-[#C4A901] text-white px-5 py-2 rounded-md">View Menu</button>
-          <button class="border-[#C4A901] border bg-transparent text-[#c4a901]  px-5 py-2 rounded-md">Order Menu</button>
+    <nav class="2xl:container mx-auto sticky top-0 bg-white shadow-lg">
+      <div
+        class="w-[75%] mx-auto grid grid-cols-1 md:grid-cols-3 items-center py-2"
+      >
+        <!-- logo  -->
+        <div class="flex items-center justify-between">
+          <img
+            src="https://ik.imagekit.io/4z8covdo9/MERN-COURSE-ASSETS/FOOD-STORE/food-munch-img.png"
+            alt="footer img"
+            width="70px"
+          />
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu md:hidden"
+          >
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+          </svg>
+        </div>
+        <!-- nav items  -->
+        <div class="col-span-2 hidden md:block">
+          <ul class="flex justify-end gap-5">
+            <li class="text-nowrap">
+              <a href="#whychoseus">Why Choose Us?</a>
+            </li>
+            <li class="text-nowrap"><a href="">Explore menu</a></li>
+            <li class="text-nowrap"><a href=""> Fresh</a></li>
+            <li class="text-nowrap"><a href="">Payment</a></li>
+            <li class="text-nowrap"><a href="">Thank you</a></li>
+          </ul>
         </div>
       </div>
-     </header>
-     <!-- Header Section ending  -->
+    </nav>
+
+    <!-- Header Section Starting  -->
+    <header>
+      <div
+        class="header-container flex justify-center items-center flex-col gap-5"
+      >
+        <h1 class="text-[45px] font-medium text-white">
+          Get Delicious Food at Anytime
+        </h1>
+        <p class="text-[28px] text-white">Eat smart and healthy</p>
+        <div class="flex gap-3">
+          <button class="bg-[#C4A901] text-white px-5 py-2 rounded-md">
+            View Menu
+          </button>
+          <button
+            class="border-[#C4A901] border bg-transparent text-[#c4a901] px-5 py-2 rounded-md"
+          >
+            Order Menu
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section ending  -->
     <!-- Why choose us Starting  -->
-    <section class="py-10">
+    <section class="py-10" id="whychoseus">
       <div class="max-w-[100%]">
         <div class="w-[75%] mx-auto space-y-2 py-3">
           <h2 class="text-[#183b56] text-[28px] font-bold">Why Choose Us?</h2>
@@ -519,15 +573,19 @@
     <!-- Follow us section ending  -->
 
     <!-- Footer section starting  -->
-     <footer>
+    <footer>
       <div class="max-w-[100%] py-20 bg-[#0D2436]">
         <div class="flex flex-col justify-center items-center gap-2">
-          <img src="https://ik.imagekit.io/4z8covdo9/MERN-COURSE-ASSETS/FOOD-STORE/food-munch-img.png" alt="footer img" class="w-10 h-10">
+          <img
+            src="https://ik.imagekit.io/4z8covdo9/MERN-COURSE-ASSETS/FOOD-STORE/food-munch-img.png"
+            alt="footer img"
+            class="w-10 h-10"
+          />
           <p class="text-[#959ead] font-bold">orderfood@foodmunch.com</p>
           <p class="text-[#959ead]">123 Ayur Vigyan Nagar, New Delhi, India.</p>
         </div>
       </div>
-     </footer>
-     <!-- Footer Section ending  -->
+    </footer>
+    <!-- Footer Section ending  -->
   </body>
 </html>
