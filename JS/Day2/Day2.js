@@ -116,3 +116,14 @@
 // arrow("Arrow function1"); // aruguments
 // arrow("Arrow function2"); // aruguments
 // arrow("Arrow function3"); // aruguments
+
+// Callback function
+// if the function is passed as an argument to the another function is called callback function
+
+// function print(a) {
+//   console.log(a());
+// }
+
+// print(() => {
+//   console.log("callback funciton");
+// });

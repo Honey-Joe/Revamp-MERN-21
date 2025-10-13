@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="2xl:container mx-auto">
+      <div class="w-[90%] mx-auto flex justify-center items-center h-screen">
+        <div class="flex flex-col gap-5">
+          <h1 class="text-[48px] text-center">Counter</h1>
+
+          <p class="text-[38px] text-center" id="count">0</p>
+
+          <div class="flex items-center gap-8">
+            <button
+              id="decBtn"
+              class="py-2 px-3 rounded-lg bg-red-600 text-white"
+            >
+              DECREASE
+            </button>
+            <button
+              id="resBtn"
+              class="py-2 px-3 rounded-lg bg-blue-600 text-white"
+            >
+              RESET
+            </button>
+            <button
+              id="incBtn"
+              class="py-2 px-3 rounded-lg bg-green-600 text-white"
+            >
+              INCREASE
+            </button>
+          </div>
+          <!-- https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png -->
+          <!-- <img
+            src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png"
+            alt=""
+            id="blubimg"
+          /> -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var count = document.getElementById("count");
+      var decBtn = document.getElementById("decBtn");
+      var resBtn = document.getElementById("resBtn");
+      var incBtn = document.getElementById("incBtn");
+      var blubimg = document.getElementById("blubimg");
+
+      //   console.dir(blubimg);
+
+      function updateColour() {
+        var value = parseInt(count.textContent);
+        if (value > 0) {
+          count.style.color = "green";
+        } else if (value < 0) {
+          count.style.color = "red";
+        } else {
+          count.style.color = "black";
+        }
+      }
+
+      incBtn.addEventListener("click", () => {
+        count.textContent = parseInt(count.textContent) + 1;
+        // count.style.color = "green";
+        // blubimg.src =
+        //   "https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png";
+        updateColour();
+      });
+
+      resBtn.addEventListener("click", () => {
+        count.textContent = 0;
+        // count.style.color = "black";
+        updateColour();
+      });
+
+      decBtn.addEventListener("click", () => {
+        count.textContent = parseInt(count.textContent) - 1;
+        // count.style.color = "red";
+        updateColour();
+      });
+    </script>
+  </body>
+</html>
