@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="2xl:container mx-auto">
+      <div class="w-[90%] mx-auto flex justify-center items-center h-screen">
+        <div
+          class="flex flex-col gap-5 shadow-lg rounded-lg border p-5 max-w-[400px] w-[100%]"
+        >
+          <h1 class="text-center font-bold text-[28px]">Login</h1>
+          <form class="flex flex-col gap-5" id="form">
+            <div class="flex flex-col gap-3">
+              <label for="email">Email:</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                class="py-2 pl-2 rounded-lg border-2 outline-none"
+                placeholder="Enter you email..."
+              />
+              <p class="text-red-600 text-sm" id="emailError"></p>
+            </div>
+
+            <div class="flex flex-col gap-3">
+              <label for="password">Password:</label>
+              <input
+                type="text"
+                name="password"
+                id="password"
+                class="py-2 pl-2 rounded-lg border-2 outline-none"
+                placeholder="Enter you password..."
+              />
+              <p class="text-red-600 text-sm" id="passError"></p>
+            </div>
+
+            <button
+              class="py-2 rounded-lg border border-green-600 bg-green-600 text-white hover:border hover:border-green-600 hover:text-green-600 transition-all hover:bg-white w-full"
+            >
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var form = document.getElementById("form");
+      var email = document.getElementById("email");
+      var password = document.getElementById("password");
+      var emailError = document.getElementById("emailError");
+      var passError = document.getElementById("passError");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        advancedValidation(email.value, password.value);
+      });
+
+      const advancedValidation = (email, password) => {
+        const emailRegex = /^\S+@\S+\.\S+$/; // email formet
+        const passRegex =
+          /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/; // pass formet
+
+        if (email.match(emailRegex)) {
+          console.log(email);
+          emailError.textContent = "";
+        } else {
+          emailError.textContent = "Invalid email formet";
+        }
+
+        if (password.match(passRegex)) {
+          passError.textContent = "";
+          console.log(password);
+        } else {
+          passError.textContent = "Invalid password formet";
+        }
+      };
+    </script>
+  </body>
+</html>
